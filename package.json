@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/cobbie/TODO/issues"
   },
-  "homepage": "https://github.com/cobbie/TODO#readme"
+  "homepage": "https://github.com/cobbie/TODO#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bootstrap": "^3.3.7"
+  }
 }
