@@ -1,17 +1,9 @@
-<p>{{$ctrl.list.items[0].text}}</p>
-<p>{{$ctrl.list.items[0].state}}</p>
-
-<li ng-class="{'editing': $ctrl.editing, 'completed': $ctrl.completed}">
-  <div class="view" ng-dblclick="$ctrl.enableEditing()">
-    <input
-      class="toggle"
-      type="checkbox"
-      ng-checked="$ctrl.completed"
-      ng-click="$ctrl.toggleTodo()">
-    <label>{{$ctrl.list.items[0].text}}</label>
-    <button class="destroy" ng-click="$ctrl.deleteTodo()"></button>
-  </div>
-  <form ng-submit="$ctrl.updateTodo()">
-    <input class="edit" ng-model="$ctrl.description">
-  </form>
-</li>
+<table> 
+  <tr>
+    <td>
+      <input type="checkbox">
+    </td>
+    <td>{{$ctrl.list.items[0].text}}</td>
+    <td>{{$ctrl.list.items[0].state}}</td>
+  </tr>
+</table>
