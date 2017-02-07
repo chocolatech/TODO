@@ -31,7 +31,9 @@ gulp.task('index', function () {
   gulp.src('./app/index.html')
     .pipe(inject(gulp.src([
       "./node_modules/angular/angular.min.js",
-      "app/app.module.js"
+      "./app/app.module.js",
+      "./app/**/*.module.js",
+      "./app/**/*.component.js",
     ], { read: false }), { relative: true }))
     .pipe(gulp.dest('./app'));
 });
