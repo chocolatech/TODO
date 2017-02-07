@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node server.js",
+    "gulp": "gulp",
+    "dev": "dev"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,10 @@
   },
   "devDependencies": {
     "body-parser": "^1.16.0",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-livereload": "^3.8.1",
+    "run-sequence": "^1.2.2"
   }
 }
