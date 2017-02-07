@@ -1,1 +1,1 @@
-angular.module('listItem', ['core']);
+angular.module('listItem', []);
