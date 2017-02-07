@@ -30,7 +30,8 @@ gulp.task('index', function () {
 
   gulp.src('./app/index.html')
     .pipe(inject(gulp.src([
-      "./node_modules/angular/angular.min.js"
+      "./node_modules/angular/angular.min.js",
+      "app/app.module.js"
     ], { read: false }), { relative: true }))
     .pipe(gulp.dest('./app'));
 });
