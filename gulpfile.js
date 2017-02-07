@@ -32,6 +32,7 @@ gulp.task('index', function () {
     .pipe(inject(gulp.src([
       "./node_modules/angular/angular.min.js",
       "./app/app.module.js",
+      "./app/**/*.service.js",
       "./app/**/*.module.js",
       "./app/**/*.component.js",
     ], { read: false }), { relative: true }))
