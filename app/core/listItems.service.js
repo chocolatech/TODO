@@ -1,5 +1,5 @@
 angular.module('core', []).service('ListItemsService', ['$http', '$window', function ($http, $window) {
-    var vm = this;
+    var api = this;
     var data = [
         {
             "text": "A long todo text.",
@@ -14,17 +14,17 @@ angular.module('core', []).service('ListItemsService', ['$http', '$window', func
             "state": "inProgress"
         }
     ];
-    vm.getListItems = function () {
+    api.getListItems = function () {
         var data = angular.fromJson($window.localStorage.getItem('itemList'));
         return data || [];
     };
 
-    vm.addListItem = function (item) {
+    api.addListItem = function (item) {
         var data = angular.fromJson($window.localStorage.getItem('itemList'));
         data.push(item);
         $window.localStorage.setItem('itemList', angular.toJson(data));
     };
-    vm.initListItems = function () {
+    api.initListItems = function () {
         var data = angular.fromJson($window.localStorage.getItem('itemList'));
         if (!data) {
             data = [
