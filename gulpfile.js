@@ -35,6 +35,7 @@ gulp.task('index', function () {
       "./app/**/*.service.js",
       "./app/**/*.module.js",
       "./app/**/*.component.js",
+      "./app/app.css"
     ], { read: false }), { relative: true }))
     .pipe(gulp.dest('./app'));
 });
