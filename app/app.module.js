@@ -1,1 +1,1 @@
-angular.module('app', ['core', 'listItem', 'listContainer']);
+angular.module('app', ['core', 'listItem', 'listContainer', 'addItem']);
