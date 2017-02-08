@@ -1,4 +1,4 @@
-<add-item data="{item}"></add-item>
+<add-item on-refresh="$ctrl.refresh($event)"></add-item>
 <div class="center" ng-repeat="item in $ctrl.items" ng-if="$ctrl.items">
     <list-item data="{item}"></list-item>
 </div>

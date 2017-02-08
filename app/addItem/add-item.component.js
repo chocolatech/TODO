@@ -1,31 +1,27 @@
 angular.module('addItem').component('addItem', {
     bindings: {
-        data: '=',
-        onSubmit: '&'
+        'onRefresh': '&'
     },
     templateUrl: 'addItem/add-item.template.html',
-    controller: [function () {
+    controller: ['ListItemsService', function (ListItemsService) {
+
         var vm = this;
 
         vm.$onInit = function $onInit() {
-            vm.newItem = {};
-            resetTodo();
+            vm.reset();
         };
 
-        vm.submitForm = function submitForm() {
-            vm.onSubmit({
-                $event: {
-                    todo: vm.newItem
-                }
-            });
-
-            resetTodo();
+        vm.reset = function () {
+            vm.newItem = { 'text': '', 'state': 'todo' };
+            vm.newItemText = '';
         };
 
-        function resetTodo() {
-            vm.newItem = {};
-        }
-
+        vm.addNewItem = function () {
+            vm.newItem.text = vm.newItemText;
+            ListItemsService.addListItem(vm.newItem);
+            vm.reset();
+            vm.onRefresh();
+        };
 
     }]
 })

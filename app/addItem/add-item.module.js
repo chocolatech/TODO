@@ -1,1 +1,1 @@
-angular.module('addItem', []);
+angular.module('addItem', ['core']);
