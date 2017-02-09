@@ -1,3 +1,7 @@
 .center {
     text-align: center;
 }
+.cross-over{
+    text-decoration: line-through;
+    color: silver;
+}
