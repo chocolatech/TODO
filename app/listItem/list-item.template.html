@@ -1,5 +1,5 @@
 <div>
-  <input type="checkbox" ng-checked="$ctrl.inputs" ng-click="$ctrl.setInput()">
-  <span ng-class="{'cross-over': $ctrl.inputs}">{{$ctrl.data.item.text}}</span>
+  <input type="checkbox" ng-checked="$ctrl.data.item.state=='done'" ng-click="$ctrl.setInput()">
+  <span ng-class="{'cross-over': $ctrl.data.item.state=='done'}">{{$ctrl.data.item.text}}</span>
   <span>{{$ctrl.data.item.state}}</span>
 </div>

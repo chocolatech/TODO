@@ -1,23 +1,23 @@
-angular.module('listItem').component('listItem', {
+angular.module('listItem', ['core']).component('listItem', {
     bindings: {
-        data: '='
+        data: '=',
+        index: '=',
+        onRefresh: '&'
     },
     templateUrl: 'listItem/list-item.template.html',
-        controller: [function () {
+        controller: ['ListItemsService', function (ListItemsService) {
         var vm = this;
-        vm.inputs = false;
 
         vm.setInput = function () {
-            vm.inputs = !vm.inputs;
-            //vm.changeState();
+            var state;
+            if(vm.data.item.state == 'done'){
+                state = 'todo';
+            } else {
+                state = 'done';
+            }
+            ListItemsService.changeState(vm.index, state);
+            vm.onRefresh();
         }
-
-        // vm.changeState = function(){
-        //    var data = ListItemsService.getListItems();
-        //     if(vm.inputs){
-        //         data[1].state = 'lol';
-        //     }
-        // };
 
     }]
 })
