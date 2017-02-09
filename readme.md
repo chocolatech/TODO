@@ -8,15 +8,14 @@
 
 
 #Partly get  
-1. Bindings  
+1. Bindings, freaking bindings  
 2. Communication between components and their dependencies  
 3. $onInit  
+4. add-item.component - how onRefresh is bound/usage
 
 
-#Don't get  
-1. app.module.js - constant, run  
-2. list.container.template.html - bind to object/function syntax  
-3. add-item.component - how onRefresh is bound/usage  
+#Don't get   
+ 
 
 #TODO  
 1. Finish app.  
