@@ -45,5 +45,12 @@ angular.module('core', []).service('ListItemsService', ['$http', '$window', func
         }
 
     };
+
+    api.changeState = function (index, state) {
+        var data = api.getListItems();
+        data[index].state = state;
+        $window.localStorage.setItem('itemList', angular.toJson(data));
+
+    };
 }
 ]);
