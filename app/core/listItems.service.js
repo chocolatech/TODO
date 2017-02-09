@@ -20,12 +20,12 @@ angular.module('core', []).service('ListItemsService', ['$http', '$window', func
     };
 
     api.addListItem = function (item) {
-        var data = angular.fromJson($window.localStorage.getItem('itemList'));
+        var data = api.getListItems();
         data.push(item);
         $window.localStorage.setItem('itemList', angular.toJson(data));
     };
     api.initListItems = function () {
-        var data = angular.fromJson($window.localStorage.getItem('itemList'));
+        var data = api.getListItems();
         if (!data) {
             data = [
                 {
